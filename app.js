@@ -7,7 +7,7 @@ exibirTextoInicial();
 function inserirTxt (tag,texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    responsiveVoice.speak(texto, 'Brazilian Portuguese Male', {rate: 1.6});
+    //responsiveVoice.speak(texto, 'Brazilian Portuguese Male', {rate: 1.6});
 }
 
 function exibirTextoInicial() {
@@ -20,7 +20,8 @@ function chutar() {
     console.log(numeroSecreto);
     console.log(chute);
     if (chute == '') {
-    responsiveVoice.speak('Não é possível chutar um número sem antes digitá-lo no campo disponível.', 'Brazilian Portuguese Male', {rate:1.2});
+        alert ('Não é possível chutar um número sem antes digitá-lo no campo disponível.')
+    //responsiveVoice.speak('Não é possível chutar um número sem antes digitá-lo no campo disponível.', 'Brazilian Portuguese Male', {rate:1.2});
 } else {
     if (chute == numeroSecreto) {
     palavraTentativa = tentativas > 1? 'tentativas' : 'tentativa';
